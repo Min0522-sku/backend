@@ -32,7 +32,7 @@ public class Practice1 {
 지시: 문제 4의 출력문을 System.out.printf() 함수와 서식 지정자를 사용하도록 수정하세요.
 요구 조건: 키(height)는 서식 지정자를 이용해 소수점 첫째 자리까지만 표시하세요.
 예시: 제 이름은 홍길동, 나이는 25세, 키는 175.5cm 입니다.*/
-        System.out.printf("제 이름은 %s, 나이는 %d세, 키는 %3.1fcm 입니다.", name, age2, height);
+        System.out.printf("제 이름은 %s, 나이는 %d세, 키는 %3.1fcm 입니다.\n", name, age2, height);
 /* 문제6: 아래와 같이 이스케이프 문자를 이용하여 콘솔에 출력하는 코드를 작성하시오.
  |\_/|
  |q p|   /}
@@ -60,7 +60,7 @@ String content = "안녕하세요!"; // 문자열 "안녕하세요!"를 저장�
         String content = "안녕하세요!";
         System.out.println("=========== 방문록 ============");
         System.out.println("번호   작성자   방문록");
-        System.out.printf("%d   %s    %s", num, writer, content);
+        System.out.printf("%d   %s    %s\n", num, writer, content);
         System.out.println("============================");
 
 /* 문제 8: Scanner를 이용하여 사용자의 이름(String)과 나이(int)를 입력받아, "OOO님의 나이는 OO세 입니다." 형식으로 출력하는 코드를 작성하시오.
@@ -75,7 +75,7 @@ String content = "안녕하세요!"; // 문자열 "안녕하세요!"를 저장�
         String name2 = input.next();
         System.out.println("나이를 입력하세요:");
         int age3 = input.nextInt();
-        System.out.printf("%s님의 나이는 %d세 입니다.", name2, age3);
+        System.out.printf("%s님의 나이는 %d세 입니다.\n", name2, age3);
 
 /*
 문제 9: Scanner를 이용해 게시물 번호(int), 제목(String), 내용(String)을 순서대로 입력받아 출력하시오.
@@ -91,7 +91,6 @@ String content = "안녕하세요!"; // 문자열 "안녕하세요!"를 저장�
 */
         System.out.println("게시물 번호 : ");
         int num2 = input.nextInt();
-
         System.out.println("제목 : ");
         input.nextLine();
         String title = input.nextLine();
@@ -107,7 +106,7 @@ String content = "안녕하세요!"; // 문자열 "안녕하세요!"를 저장�
 */
         System.out.println("성별을 입력하세요(남/여) : ");
         char song = input.next().charAt(0);
-        System.out.printf("입력하신 성별은 \'%c\' 입니다.", song);
+        System.out.printf("입력하신 성별은 \'%c\' 입니다.\n", song);
 
 /*
 문제 11: Scanner를 사용하여 아래 4가지 정보를 순서대로 입력받아 출력하는 코드를 작성하시오.
@@ -133,10 +132,10 @@ String content = "안녕하세요!"; // 문자열 "안녕하세요!"를 저장�
         System.out.println("프로그래머 입니까? (true/false): ");
         boolean prog = input.nextBoolean();
         System.out.println("--- 자기소개 ---");
-        System.out.printf("이름: %s", name3);
-        System.out.printf("나이: %d", age4);
-        System.out.printf("키: %f", key);
-        System.out.printf("프로그래머 여부: %b", prog);
+        System.out.printf("이름: %s\n", name3);
+        System.out.printf("나이: %d\n", age4);
+        System.out.printf("키: %f\n", key);
+        System.out.printf("프로그래머 여부: %b\n", prog);
 
     }
 }
