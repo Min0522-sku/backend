@@ -2,7 +2,7 @@ package 종합.예제2;
 
 import java.util.Scanner;
 
-public class Exam2 {
+public class BoardService {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String[] contents = new String[2];
