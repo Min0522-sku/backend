@@ -1,6 +1,5 @@
 package day05;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Exam1 {
@@ -25,7 +24,7 @@ public class Exam1 {
         // 실행중에 개발자가 배열내 주소값을 삭제할 수 없다.
         // 주소값에 초기값이 생략되면 임의의 초기값을 자동으로 들어간다. < G = 쓰레기 C: 수집기, 비어있는 메모리 삭제>
         // 정수 : 0, 실수 : 0.0, 문자열/객체 : null, 논리 : false
-
+        int a = 0;
 
         System.out.println(arr1.length); //배열 변수명.length: 배열의 총 길이 =3
         // 배열내 요소 값 수정

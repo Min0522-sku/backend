@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Practice6 {
     public static void main(String[] args) {
-
+        int a = 0;
         Scanner scan = new Scanner(System.in);
         /*[실습] * 제출용 */
 
