@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class BoardService {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        BoardController bc = new BoardController();
         for (; ; ) {
 
             System.out.println("==========My Community==========");
@@ -18,7 +19,6 @@ public class BoardService {
                 System.out.print("작성자 : ");
                 String writer = scan.nextLine();
                 // BoardController 의 저장 기능 호출하여 저장 결과 받기
-                BoardController bc = new BoardController();
                 boolean result = bc.doPost(content, writer);
                 if (result) {
                     System.out.println("[안내]저장성공");
@@ -28,7 +28,6 @@ public class BoardService {
 
             }else if (ch == 2) {
                 // BoardController 의 조회 기능 호출하여 조회 결과 받기
-                BoardController bc = new BoardController();
                 Board[] boards = bc.doGet();
                 for(int i = 0; i < boards.length; i++){
                     if (boards[i] != null){
