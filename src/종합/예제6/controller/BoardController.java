@@ -1,6 +1,10 @@
 package 종합.예제6.controller;
 
 import 종합.예제6.model.dao.BoardDao;
+import 종합.예제6.model.dto.BoardDto;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class BoardController {
     private BoardController(){}
@@ -18,5 +22,11 @@ public class BoardController {
     public boolean doPost(String content, String writer){
         boolean result = bd.doPost(content, writer);
         return result;
+    }
+
+
+    //전체 조회 처리 : view 에게 모든 게시물들을 요청받아 dao 에게 재요청하여 결과를 view에게 전달한다.
+    public ArrayList<BoardDto> doget(){
+        return bd.doget();
     }
 }
