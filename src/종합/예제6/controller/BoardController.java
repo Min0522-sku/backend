@@ -11,4 +11,12 @@ public class BoardController {
 
 
     private BoardDao bd = BoardDao.getInstance();
+
+
+    //등록제어
+    // view 에게 입력받은 content, writer 받아서 dao 에게 요청 후 결과를 view에게 전달
+    public boolean doPost(String content, String writer){
+        boolean result = bd.doPost(content, writer);
+        return result;
+    }
 }
