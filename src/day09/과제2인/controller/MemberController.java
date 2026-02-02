@@ -35,7 +35,7 @@ public class MemberController {
         }
         return false;
     }
-    public boolean logout(String id, String pw){
+    public boolean logout(){
         MemberController.getInstance().setCurrentUserNo(0);
         return true;
     }
@@ -49,8 +49,19 @@ public class MemberController {
             }
         }
         return nickname;
-        }
     }
+
+    public String returnSeller(int UserNO){
+        String seller ="";
+        ArrayList<UserDto> userList = UD.userListGet();
+        for (UserDto user : userList){
+            if (UserNO == user.getUserNo()){
+                seller = user.getNickname();
+            }
+        }
+        return seller;
+    }
+}
 
 
 

@@ -15,6 +15,7 @@ public class MemberView {
     private UserDto UD = new UserDto();
     private ProductController PC = ProductController.getInstance();
     private MemberController MC = MemberController.getInstance();
+    private ProductView PV = ProductView.getInstance();
     private Scanner scan = new Scanner(System.in);
 
 
@@ -41,7 +42,9 @@ public class MemberView {
         boolean result = MC.login(id,pw);
         if (result){
             System.out.printf("[안내] %s님 환영합니다\n", MC.returnNickname(id));
-        }
+            PV.indexView();
+        }else {System.out.println("로그인 실패");}
+
     }
 
     public void indexView(){
