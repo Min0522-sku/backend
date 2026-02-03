@@ -1,6 +1,6 @@
 package day11;
 
-public class exam1 {
+public class Exam1 {
     public static void main(String[] args) {
         /* 상속 : 클래스로 부터 다른 클래스 에게 물려주는 행위
 A클래스 로 부터 B클래스에게 (맴버변수/메소드) 물려주는 행위
