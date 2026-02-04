@@ -1,0 +1,10 @@
+package day12;
+
+public interface Testinterface {
+    // *생성자 불가능
+    // *멤버변수 불가능
+    public static final int b =10; // *상수 가능
+    // * 추상메소드 : 메소드 선언만, {} 구현부 없는
+    public abstract void  method1();
+    void method2(int x);
+}
