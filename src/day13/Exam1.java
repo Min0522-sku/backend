@@ -1,5 +1,8 @@
 package day13;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class Exam1 {
     public static void main(String[] args) {
         //예외 처리 : 개발자가 구현한 로직이나 사용자의 영향으로 문제
@@ -19,6 +22,10 @@ public class Exam1 {
         // 1. ClassNotFoundException : 클래스를 못 찾았을때 발생하는 예외 클래스
         // 2. InterruptedException : 흐름(스레드)가 중단 되었을때 발생하는 예외 클래스
         // 3. NullPointerException : 객체가 null일때 (.)접근연산자 사용시 발생하는 예외 클래스
+        // 4. NumberFormatException
+        // 5. ArrayIndexOutOfBoundsException : 배열에 존재하지 않는 인덱스를 호출시 발생하는 예외 클래스
+        // 6. InputMismatchException
+        // 7. Exception 예외 상위 클래스 : 이걸로 다 처리 가능
 
         //일반예외 예시1 Class.forName("패키지명.클래스명"); : 현재 프로젝트내 클래스가 존재하는지 검사/동적할당
         try {
@@ -52,10 +59,39 @@ public class Exam1 {
         try{
             String str2 = "1abc";
             int int2 = Integer.parseInt(str2); // NumberFormatException
-        }catch (NullPointerException e4){
+        }catch (NumberFormatException e4){
             System.out.println("예외 발생4 : 정수타입으로 변환 불가능하다.");
         }
 
+        //실행예외 예시5
+        try {
+            int[] ary = {1, 2, 3};
+            System.out.println(ary[3]);
+        }catch (ArrayIndexOutOfBoundsException e5){
+            System.out.println("예외 발생5 : 존재하지 않는 인덱스 입니다.");
+        }
 
+        //실행예외 예시6
+        try{
+            Scanner scan = new Scanner(System.in);
+            int value = scan.nextInt(); // 만약 비정상적인 입력이라면 오류 발생
+        }catch (InputMismatchException e6){
+            System.out.println("예외 발생6 : 입력할수 없는 정보 또는 잘못된 형식입니다." + e6);
+        }
+
+        // 7 예외는 다양한 이류로 발생한다. 예외 중에 상위클래스가 존재한다. Exception 클래스
+        // 이때가지 예외 처리 했던것들을 Exception으로 처리가능
+        try{
+
+        }catch (NumberFormatException e2){
+
+        }
+        catch (NullPointerException e1){
+
+        }catch (Exception e){ // 모든 예외에 대해 처리 해주는 상위 클래스. 다중 catch 할경우 가장 마지막에 사용
+            System.out.println(e); // 위에서 다 잡아내기때문
+        }finally {
+            System.out.println("예외 발생 여부 상관없이 무조건 실행되는 구역");
+        }
     }
 }
