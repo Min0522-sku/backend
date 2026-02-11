@@ -76,5 +76,28 @@ public class Exam2 {
         String html = "<div>유재석<div> <br/><div>강호동<div> <br/>";
         System.out.println(html.replace("<br/>", "\n")); // html 줄바꿈 --> 자바 줄바꿈 치환
 
+        // .substring(시작, [끝]);
+        String str15 = "012345-1230123".substring(0,6);
+        System.out.println("str15 = " + str15);
+
+        // .split("구분문자")  구분문자 기준으로 잘라서 배열로 반환
+        String[] str16 = "012345-1230123".split("-");
+        System.out.println("str16[0] = " + str16[0]);
+        System.out.println("str16[1] = " + str16[1]);
+
+        // .indexOf("찾을문자") 찾을문자가 존재하면 찾은 인덱스 번호 아니면 -1 반환, 활용처: 검색
+        // .contains("찾을문자") 찾을문자가 존재하면 true 아니면 false 반환
+        System.out.println("자바 프로그래밍 언어".indexOf("프로"));
+        System.out.println("자바 프로그래밍 언어".contains("언어"));
+
+        // .getBytes() 문자열을 byte배열[]로 반환/추출
+        byte[] str17 ="ABC".getBytes();
+        System.out.println(Arrays.toString(str17));
+        // new String(문자열 byte) byte배열 -> 문자열 타입
+        String str18 = new String(str17);
+        System.out.println("str18 = " + str18);
+
+
+
     }
 }
